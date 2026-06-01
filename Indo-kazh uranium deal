@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Uranium Bet and the Broken Road — Geopolitics & Policy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Space+Mono:wght@400;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --paper: #f7f3ec;
+    --paper-dark: #ede8df;
+    --accent: #8b1a1a;
+    --accent-light: #c0392b;
+    --gold: #b8860b;
+    --muted: #6b5e4e;
+    --border: #c8bfb0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 17px;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 18px 24px 14px;
+    border-bottom: 3px solid var(--gold);
+  }
+  .masthead-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .masthead-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #aaa;
+    letter-spacing: 2px;
+  }
+
+  /* ── HERO SECTION ── */
+  .hero {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 52px 28px 0;
+  }
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-left: 3px solid var(--accent);
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    line-height: 1.12;
+    color: var(--ink);
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-deck {
+    font-size: 19px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 28px;
+    font-style: italic;
+    border-left: 2px solid var(--border);
+    padding-left: 18px;
+  }
+  .byline-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0;
+  }
+  .byline-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .byline-text { font-size: 13px; color: var(--muted); }
+  .byline-text strong { color: var(--ink); font-weight: 600; display: block; }
+  .reading-time {
+    margin-left: auto;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  /* ── HERO IMAGE BAND ── */
+  .hero-image-band {
+    width: 100%;
+    margin: 0;
+    height: 420px;
+    background: linear-gradient(135deg, #1a1208 0%, #2d1b0e 30%, #1a2d1a 60%, #0e1a2d 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero-image-band svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.85;
+  }
+  .hero-image-caption {
+    position: relative;
+    z-index: 2;
+    padding: 20px 40px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(26,18,8,0.9) 0%, transparent 100%);
+  }
+  .hero-image-caption p {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(247,243,236,0.7);
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .hero-image-caption strong {
+    color: var(--gold);
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 4px;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 28px 60px;
+  }
+
+  .article-body p {
+    margin-bottom: 24px;
+    font-size: 17px;
+    line-height: 1.82;
+    color: #2a1f14;
+  }
+
+  /* Drop cap on opening paragraph */
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    float: left;
+    line-height: 0.78;
+    margin: 10px 10px -4px 0;
+    color: var(--accent);
+  }
+
+  /* Short punchy paragraph */
+  .p-short {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+
+  /* Observation line — indented, quieter */
+  .observation {
+    margin: 8px 0 28px 0;
+    padding-left: 20px;
+    border-left: 2px solid var(--gold);
+    font-size: 15.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* ── SECTION HEADING ── */
+  .section-head {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 52px 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .section-head .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  /* Section icon */
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    margin: 44px 0 -8px;
+    opacity: 0.5;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    margin: 40px -28px;
+    padding: 32px 40px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.5;
+    position: relative;
+  }
+  .pull-quote::before {
+    content: '\201C';
+    font-size: 90px;
+    color: var(--gold);
+    line-height: 0;
+    position: absolute;
+    top: 42px; left: 18px;
+    opacity: 0.5;
+  }
+  .pull-quote p { color: var(--paper); font-size: 20px; margin: 0; padding-left: 24px; }
+  .pull-quote cite {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-top: 14px;
+    font-style: normal;
+    padding-left: 24px;
+  }
+
+  /* ── DATA CALLOUT BOX ── */
+  .data-box {
+    background: var(--paper-dark);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    padding: 22px 26px;
+    margin: 36px 0;
+  }
+  .data-box-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+  }
+  .data-item { text-align: center; }
+  .data-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+  }
+  .data-label {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.45;
+    margin-top: 5px;
+    display: block;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    margin: 40px 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 0;
+  }
+  .timeline-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    padding-left: 24px;
+  }
+  .tl-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 0 0 0;
+    position: relative;
+  }
+  .tl-year {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--accent);
+    min-width: 60px;
+    padding: 10px 0 10px 24px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .tl-year::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--paper);
+    outline: 2px solid var(--accent);
+  }
+  .tl-event {
+    padding: 10px 16px 10px 24px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+    border-bottom: 1px dashed var(--border);
+    flex: 1;
+  }
+  .tl-event strong {
+    display: block;
+    font-size: 13.5px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+  .tl-row:last-child .tl-event { border-bottom: none; }
+
+  /* ── ROUTE CHART ── */
+  .chart-wrap {
+    margin: 36px 0;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 24px 20px 16px;
+  }
+  .chart-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .chart-sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .chart-source {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: #999;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+  }
+  .route-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .route-row:last-child { border-bottom: none; }
+  .route-name { font-weight: 600; font-size: 13.5px; min-width: 180px; flex-shrink: 0; }
+  .route-bar-wrap { flex: 1; }
+  .route-bar {
+    height: 20px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: white;
+    font-weight: 700;
+  }
+  .route-status {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    min-width: 90px;
+    text-align: right;
+  }
+  .st-disrupted { color: #c0392b; font-weight: 700; }
+  .st-developing { color: #e67e22; font-weight: 700; }
+  .st-operational { color: #27ae60; font-weight: 700; }
+  .st-blocked { color: #7f8c8d; font-weight: 700; }
+
+  /* ── THREE STAGE TABLE ── */
+  .stage-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+  }
+  .stage-table th {
+    background: var(--ink);
+    color: var(--gold);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .stage-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .stage-table tr:nth-child(even) td { background: var(--paper-dark); }
+  .stage-badge { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 18px; color: var(--accent); }
+  .status-active { color: #2e7d32; font-weight: 600; font-size: 12px; }
+  .status-progress { color: #e65100; font-weight: 600; font-size: 12px; }
+  .status-future { color: #1565c0; font-weight: 600; font-size: 12px; }
+
+  /* ── MAP VISUAL ── */
+  .route-map {
+    margin: 36px 0;
+    background: var(--paper-dark);
+    border: 1px solid var(--border);
+    padding: 24px;
+  }
+  .route-map-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  /* ── RECOMMENDATIONS ── */
+  .rec-list { list-style: none; margin: 24px 0; }
+  .rec-list li {
+    padding: 16px 18px 16px 52px;
+    margin-bottom: 12px;
+    background: var(--paper-dark);
+    border: 1px solid var(--border);
+    position: relative;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+  .rec-list li::before {
+    content: attr(data-n);
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .rec-list li strong {
+    display: block;
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  /* ── CLOSING ── */
+  .closing-rule {
+    text-align: center;
+    margin: 52px 0 28px;
+    color: var(--muted);
+    font-size: 22px;
+    letter-spacing: 8px;
+  }
+  .footnotes {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-top: 32px;
+  }
+  .footnotes p {
+    font-size: 12px !important;
+    color: var(--muted);
+    margin-bottom: 6px !important;
+    line-height: 1.5 !important;
+    font-family: 'Space Mono', monospace;
+  }
+  .fn-head {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px !important;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; }
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .divider {
+    text-align: center;
+    margin: 44px 0 0;
+    color: var(--border);
+    font-size: 13px;
+    letter-spacing: 6px;
+  }
+  /* 1. Size and shape the container */
+.byline-avatar {
+  width: 40px;                 /* Sets a fixed width */
+  height: 40px;                /* Sets an equal fixed height */
+  border-radius: 50%;          /* Forces a perfect circle shape */
+  overflow: hidden;            /* Chops off any part of the image spilling out */
+  display: inline-flex;        /* Keeps it perfectly aligned inline with text */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;              /* Prevents the circle from squeezing */
+}
+
+/* 2. Resize and crop the image inside it */
+.byline-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* Centers and fills the circle without stretching */
+}
+/* Forces the map section to take up a full independent row block */
+.hero-image-block {
+  width: 100%;
+  clear: both;              /* Breaks out of any accidental floating containers */
+  display: block;           /* Explicitly overrides accidental flex-child behavior */
+  margin-bottom: 2.5rem;    /* Generates an even spacing gap above the text layout */
+}
+
+.hero-image-inner {
+  max-width: 800px;         /* Keeps the map dimension neat and crisp */
+  margin: 0 auto;           /* Centers the map horizontally on desktop monitors */
+}
+
+.hero-image-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Forces the body copy text directly back underneath the map image */
+.article-body {
+  width: 100%;
+  max-width: 680px;         /* Standard readability width layout for long articles */
+  margin: 0 auto;           /* Centers the content block symmetrically */
+  display: block;           /* Overrides column structures */
+  clear: both;
+}
+
+/* Typography polish for the drop cap design */
+.dropcap {
+  font-size: 5.5rem;
+  color: var(--accent);
+  float: left;
+  line-height: 0.85;
+  padding-right: 8px;
+  margin-top: 4px;
+  font-weight: bold;
+}
+.route-bar {
+    white-space: nowrap;   /* Keeps "3,000 km" on a single line */
+    overflow: visible;     /* Ensures text remains visible if the bar is tiny */
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-name">THE DELHI BRIEF</div>
+  <div class="masthead-date">Vol. I &nbsp;·&nbsp; Issue 1 &nbsp;·&nbsp; 1 June 2026</div>
+</div>
+
+<!-- HERO TEXT -->
+<div class="hero">
+  <div class="section-label">Energy Diplomacy · Central Asia</div>
+  <h1 class="hero-title">The Uranium Bet and the <em>Broken Road:</em><br>India, Kazakhstan and the Corridor That Cannot Wait</h1>
+  <p class="hero-deck">New Delhi has just signed one of Asia's largest uranium deals. The preferred route to deliver it runs through a country at war. Something has to give.</p>
+  <div class="byline-bar">
+    <div class="byline-avatar">
+      <img src="images/1734282205595.jpeg" alt="" srcset="">
+    </div>
+    <div class="byline-text">
+      <strong>Debpratim Som</strong>
+      Independent Analyst · International Relations &amp; Policy
+    </div>
+    <div class="reading-time">⏱ 8 min read</div>
+  </div>
+</div>
+
+<!-- HERO IMAGE — SVG illustration of the route -->
+<!-- <div class="hero-image-band">
+  <svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+</div> -->
+<div class="hero-image-block">
+  <div class="hero-image-inner">
+    <!-- <img src="images/kazatomprom_logotip_resize_w_1420_h_.jpg" alt="Kazakhstan Uranium Map"> -->
+  </div>
+</div>
+<!-- ARTICLE -->
+<div class="article-body">
+
+  <p><span class="dropcap">I</span>n April 2026, shareholders of Kazakhstan's state-owned uranium giant Kazatomprom voted with a striking 92.9 percent majority to approve a supply contract with India's Department of Atomic Energy. At over $4 billion, covering long-term deliveries of natural uranium concentrates, the deal represents more than half of Kazatomprom's total booked asset value. The vote was not merely a commercial event. It was a statement of geopolitical intent: Astana believes in New Delhi as a long-term strategic partner, and it wanted the world to see that belief reflected in a shareholder register.</p>
+
+  <p>At almost the same moment, India's preferred corridor of Chabahar Port and the INSTC threading through Iran was quietly collapsing. The US sanctions waiver had lapsed. The connecting railway faced delays. The Union Budget had allocated it zero rupees.</p>
+
+  <p class="p-short">India had found its largest uranium partner. It had simultaneously lost its most direct route to that partner's landlocked nation.</p>
+
+  <!-- DATA BOX -->
+  <div class="data-box">
+    <div class="data-box-title">At a Glance</div>
+    <div class="data-grid">
+      <div class="data-item">
+        <span class="data-number">$4B+</span>
+        <span class="data-label">Contract value,<br>Kazatomprom–DAE 2026</span>
+      </div>
+      <div class="data-item">
+        <span class="data-number">92.9%</span>
+        <span class="data-label">Shareholder vote<br>in favour at EGM</span>
+      </div>
+      <div class="data-item">
+        <span class="data-number">100 GW</span>
+        <span class="data-label">India's nuclear<br>capacity target by 2047</span>
+      </div>
+      <div class="data-item">
+        <span class="data-number">~400T</span>
+        <span class="data-label">India's annual domestic<br>uranium output</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <!-- <svg class="section-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="8" fill="none" stroke="#8b1a1a" stroke-width="2"/>
+    <circle cx="20" cy="20" r="2.5" fill="#8b1a1a"/>
+    <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="#8b1a1a" stroke-width="1.2" transform="rotate(-30 20 20)"/>
+    <ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="#8b1a1a" stroke-width="1.2" transform="rotate(30 20 20)"/>
+  </svg> -->
+  <div class="section-head">
+    <span class="label">01</span>
+    Why Kazakhstan?
+  </div>
+
+  <p>India's hunger for uranium is a structural feature of its nuclear ambitions, not a recent preference. The country currently operates 24 reactors at roughly 8 GW. Its declared target is 100 GW by 2047. Between 2025 and 2033 alone, the government estimates it will need to import at least 9,000 metric tonne units of uranium to fuel reactors under construction or advanced planning. Domestic mines, primarily in Jharkhand's Singhbhum belt, produce approximately 400 tonnes annually ,enough to cover a fraction of what the expansion demands. India's own reserves are low-grade, expensive to extract, and capable of meeting only about 25 percent of future demand at the outside.</p>
+
+  <p>Kazakhstan is the natural answer. It accounts for over 40 percent of global uranium output, holds approximately 14 percent of known world reserves, and employs in-situ recovery methods that make its production costs among the lowest on earth. The 2026 deal follows earlier agreements in 2009 and 2015, but the scale is of a different order. This is not a supplementary supply arrangement, It is a foundational partnership, the sort that takes years of patient diplomacy to assemble and a single political crisis to unravel.</p>
+
+  <p>For Kazakhstan, the maths is equally clear. Chinese companies have been steadily acquiring stakes in Kazakhstani uranium projects, quietly displacing positions previously held by Russia's Rosatom. Diversifying its customer base, anchoring a long-term relationship with a major democratic power that has its own sovereign nuclear ambitions, is precisely what Astana's multi-vector foreign policy doctrine demands. The 92.9 percent shareholder approval is not a boardroom vote. It is a nation-level bet.</p>
+
+  <div class="observation">
+    There is something worth noting in that number. A margin that large, on a deal that size, does not happen without deliberate government guidance. Kazakhstan did not just accept India's offer rather it chose it.
+  </div>
+
+  <!-- SECTION 2 -->
+  <!-- <svg class="section-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> -->
+    <polygon points="20,4 36,34 4,34" fill="none" stroke="#8b1a1a" stroke-width="2"/>
+    <polygon points="20,12 30,28 10,28" fill="none" stroke="#8b1a1a" stroke-width="1" opacity="0.5"/>
+    <circle cx="20" cy="22" r="2" fill="#8b1a1a"/>
+  </svg>
+  <div class="section-head">
+    <span class="label">02</span>
+    Bhabha's Gambit — What India Actually Intends to Do with This Uranium
+  </div>
+
+  <p>To understand why the Kazakhstan deal matters beyond its headline value, you need to understand what India plans to do with the uranium. And that requires a brief encounter with the most architecturally ambitious nuclear fuel cycle ever conceived by any country.</p>
+
+  <p>In the 1950s, physicist Homi Jehangir Bhabha designed a three-stage nuclear programme explicitly engineered around India's resource reality: limited uranium, but one of the world's largest deposits of thorium, estimated at over a million tonnes, theoretically enough to power the country for centuries. The logic was elegant in its patience: use imported and domestic uranium in the first stage, use the plutonium that generates to breed more fuel in the second, and unlock the thorium cycle in the third. Each stage feeds the next. The whole structure only works if the first stage runs reliably, indefinitely.</p>
+
+  <!-- THREE STAGE TABLE -->
+  <table class="stage-table">
+    <thead>
+      <tr>
+        <th>Stage</th><th>Reactor Type</th><th>Fuel Input</th><th>Output / Purpose</th><th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="stage-badge">I</span></td>
+        <td>Pressurised Heavy Water Reactors (PHWRs)</td>
+        <td>Natural uranium (imported + domestic)</td>
+        <td>Electricity + plutonium-239 from spent fuel</td>
+        <td><span class="status-active">● Operational</span></td>
+      </tr>
+      <tr>
+        <td><span class="stage-badge">II</span></td>
+        <td>Fast Breeder Reactors (FBRs)</td>
+        <td>Plutonium-239 (from Stage I reprocessing)</td>
+        <td>More fuel than consumed; breeds U-233 from thorium blanket</td>
+        <td><span class="status-progress">◐ Just Entered — PFBR, Kalpakkam, April 2026</span></td>
+      </tr>
+      <tr>
+        <td><span class="stage-badge">III</span></td>
+        <td>Advanced Heavy Water Reactors (AHWRs)</td>
+        <td>Thorium-232 + Uranium-233</td>
+        <td>Near-inexhaustible closed fuel cycle using thorium</td>
+        <td><span class="status-future">○ Future — Under Development</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Most commentary on the Kazakhstan deal treats it as a simple supply transaction. That misses the point. Every kilogram of natural uranium fed into a PHWR generates the plutonium that will fuel the Prototype Fast Breeder Reactor at Kalpakkam, which achieved first criticality in April 2026, making India only the second country after Russia to operate a commercial fast breeder. That plutonium, in turn, will breed uranium-233 from thorium blankets, unlocking Stage III. Without a secure, diversified uranium supply pipeline, Bhabha's entire architecture stalls at the first rung. The Kazatomprom contract is not merely a supply deal.</p>
+
+  <p class="p-short">India is not importing uranium. It is purchasing the raw material for its own nuclear independence — a distinction that separates resource diplomacy from resource dependency.</p>
+
+  <p>The Kazakhstan deal is also notable for what it signals about India's broader procurement strategy. New Delhi has simultaneously signed a CAD 2.6 billion deal with Canada's Cameco for nearly 22 million pounds of uranium concentrate over nine years beginning 2027. Russia and France remain in the supplier portfolio. This is deliberate multi-sourcing, the same logic that governs India's defence procurement. No single nation should hold veto power over its nuclear fuel supply chain.</p>
+
+  <!-- SECTION 3 -->
+  <!-- <svg class="section-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> -->
+    <rect x="6" y="24" width="28" height="12" rx="1" fill="none" stroke="#8b1a1a" stroke-width="2"/>
+    <path d="M10 24 L10 16 Q10 10 20 8 Q30 10 30 16 L30 24" fill="none" stroke="#8b1a1a" stroke-width="1.5"/>
+    <line x1="16" y1="24" x2="16" y2="36" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="24" y1="24" x2="24" y2="36" stroke="#8b1a1a" stroke-width="1" stroke-dasharray="2,2"/>
+    <circle cx="20" cy="30" r="2" fill="#8b1a1a"/>
+  </svg>
+  <div class="section-head">
+    <span class="label">03</span>
+    The Broken Road — Chabahar and the INSTC Crisis
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="timeline">
+    <div class="timeline-title">India–Kazakhstan Uranium Diplomacy — Key Milestones</div>
+    <div class="tl-row">
+      <div class="tl-year">2009</div>
+      <div class="tl-event"><strong>First Uranium Agreement</strong>India and Kazakhstan sign an initial uranium supply framework, the first formal commitment post-NSG waiver.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">2015</div>
+      <div class="tl-event"><strong>Supply Expansion</strong>Agreement expanded; Kazakhstan emerges as India's largest single uranium supplier by volume.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">2016</div>
+      <div class="tl-event"><strong>Chabahar MOU signed</strong>India, Iran and Afghanistan formalise port access; INSTC identified as strategic corridor to Central Asia.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">2024</div>
+      <div class="tl-event"><strong>Chabahar Lease Agreement</strong>India Ports Global signs 10-year operational agreement for Shahid Beheshti terminal; $120M investment committed.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">Feb 2026</div>
+      <div class="tl-event"><strong>Iran Crisis</strong>Assassination of Supreme Leader Khamenei; full-scale US-Israel-Iran conflict begins. INSTC environment deteriorates sharply.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">Apr 2026</div>
+      <div class="tl-event"><strong>$4B Uranium Contract</strong>Kazatomprom EGM votes 92.9% in favour of DAE supply deal. PFBR Kalpakkam achieves first criticality.</div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">Apr 26, 2026</div>
+      <div class="tl-event"><strong>US Sanctions Waiver Expires</strong>No extension granted. Chabahar terminal operations effectively suspended. Union Budget 2026-27 allocates zero rupees to the project.</div>
+    </div>
+  </div>
+
+  <p>The International North-South Transport Corridor — a 7,200-kilometre multimodal network connecting Mumbai through Iran, the Caspian Sea, and onward to Russia, Central Asia, and Northern Europe, was designed to be precisely the infrastructure that would make India's presence in Kazakhstan meaningful beyond a single supply contract. Estimates suggested it could cut transit times by 40 percent and logistics costs by 30 percent compared to Suez Canal routes. Chabahar Port, operated by India Ports Global with a $120 million investment, was its southern anchor.</p>
+
+  <p>That anchor has come loose. The assassination of Iran's Supreme Leader in February 2026 and the subsequent US-Israel-Iran military conflict have fundamentally altered the operating environment. The Chabahar-Zahedan railway, critical for connecting the port to Iran's national grid and slated for completion in 2026, now faces indefinite delays as Iran redirects resources to wartime mobilisation. The sanctions waiver expired with no extension. The most telling detail was not the military conflict at all but it was the budget line. The Union Budget 2026-27 allocated zero rupees to Chabahar. A government communicates its priorities through what it funds and what it quietly abandons.</p>
+
+  <div class="observation">
+    Geopolitical strategist Brahma Chellaney warned that India's retreat would directly benefit China's connectivity ambitions in the region. Gwadar Port — Beijing's CPEC anchor — sits just 170 kilometres from Chabahar. The geography is unforgiving: if India withdraws, it does not leave a vacuum. It leaves a prize.
+  </div>
+
+  <!-- ROUTE CHART -->
+  <div class="chart-wrap">
+    <div class="chart-title">India's Eurasian Connectivity Options — Distance &amp; Operational Status (2026)</div>
+    <div class="chart-sub">Approximate route lengths and current geopolitical status</div>
+    <div style="margin-top:8px;">
+      <div class="route-row">
+        <div class="route-name">INSTC via Chabahar</div>
+        <div class="route-bar-wrap"><div class="route-bar" style="background:#c0392b; width:60%;">7,200 km</div></div>
+        <div class="route-status st-disrupted">DISRUPTED</div>
+      </div>
+      <div class="route-row">
+        <div class="route-name">IMEC (India–Europe)</div>
+        <div class="route-bar-wrap"><div class="route-bar" style="background:#e67e22; width:75%;">~9,000 km</div></div>
+        <div class="route-status st-developing">DEVELOPING</div>
+      </div>
+      <div class="route-row">
+        <div class="route-name">Suez Canal Route</div>
+        <div class="route-bar-wrap"><div class="route-bar" style="background:#7f8c8d; width:100%;">~12,000 km</div></div>
+        <div class="route-status st-operational">OPERATIONAL</div>
+      </div>
+      <div class="route-row">
+        <div class="route-name">Via Pakistan (CPEC)</div>
+        <div class="route-bar-wrap"><div class="route-bar" style="background:#2c3e50; width:25%;">~3,000 km</div></div>
+        <div class="route-status st-blocked">CLOSED</div>
+      </div>
+    </div>
+    <div class="chart-source">Source: INSTC Secretariat; Chatham House; Author's compilation. Distances are approximate route lengths.</div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <!-- <svg class="section-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> -->
+    <path d="M8 32 L8 16 L20 8 L32 16 L32 32 Z" fill="none" stroke="#8b1a1a" stroke-width="2"/>
+    <line x1="16" y1="32" x2="16" y2="22" stroke="#8b1a1a" stroke-width="1.5"/>
+    <line x1="24" y1="32" x2="24" y2="22" stroke="#8b1a1a" stroke-width="1.5"/>
+    <rect x="16" y="22" width="8" height="10" fill="none" stroke="#8b1a1a" stroke-width="1"/>
+    <line x1="20" y1="8" x2="20" y2="4" stroke="#8b1a1a" stroke-width="1.5"/>
+    <circle cx="20" cy="3" r="1.5" fill="#8b1a1a"/>
+  </svg>
+  <div class="section-head">
+    <span class="label">04</span>
+    The Paradox — Resource Diplomacy Without Corridor Diplomacy
+  </div>
+
+  <p>Here is the question that India's policymakers will have to answer, probably sooner than they would prefer: can resource diplomacy, securing contracts for uranium, rare earths, beryllium, tantalum substitutes for corridor diplomacy? Or are the two structurally inseparable?</p>
+
+  <p>The optimistic reading is that uranium, unlike wheat or manufactured goods, can travel by sea. Kazakhstan's uranium concentrates can reach India via Caspian ports to Baku and then by various routes that avoid Iranian territory entirely. The $4 billion contract will not immediately be disrupted by Chabahar's closure. But the broader vision of India as a meaningful economic partner embedded in Central Asia's continental architecture, counterbalancing both Chinese investment and Russian influence, cannot be realised through commodity contracts alone. It requires physical presence: regular cargo flows, institutional weight, the credibility that comes from operating infrastructure consistently through difficult periods. A landlocked region's trust is earned through roads and railways, not annual trade reports.</p>
+
+  <p>There is also a technology dimension that rarely gets the attention it deserves. Kazakhstan does not possess domestic uranium enrichment capability — it produces uranium concentrates (U₃O₈) but lacks the facilities to process them to reactor-grade fuel. India, by contrast, has developed rare expertise in the back-end of the nuclear fuel cycle: reprocessing spent fuel, operating heavy water plants, and most significantly, the closed fuel cycle technologies under Bhabha's three-stage programme. This creates a natural basis for technology partnership that goes well beyond a buyer-seller relationship. Joint ventures in uranium processing, collaboration on small modular reactor design ,which India is actively developing and Central Asia's first India-backed rare earth processing facility would represent a genuinely strategic partnership rather than a commercial one. But none of that happens without the physical connective tissue of a functioning corridor.</p>
+
+  <div class="pull-quote">
+    <p>For Indian policymakers, the irony is difficult to miss. The largest uranium agreement in the country's history has arrived at the very moment its preferred route into Central Asia has become politically uncertain.</p>
+    <cite>— Debpratim</cite>
+  </div>
+
+  <!-- SECTION 5 -->
+  <!-- <svg class="section-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"> -->
+    <circle cx="20" cy="20" r="14" fill="none" stroke="#8b1a1a" stroke-width="2"/>
+    <path d="M14 20 L18 24 L26 16" fill="none" stroke="#8b1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="section-head">
+    <span class="label">05</span>
+    What New Delhi Must Do — Three Imperatives
+  </div>
+
+  <ul class="rec-list">
+    <li data-n="1">
+      <strong>Do not abandon Chabahar — restructure it</strong>
+      A full Indian withdrawal from Chabahar hands Beijing a strategic gift it has sought for years. New Delhi should explore a temporary transfer of terminal operations to an Iranian entity under a legal framework that preserves India's contractual rights, maintain back-channel engagement with Tehran regardless of Washington's posture, and keep the option to re-engage operationally when the conflict environment permits. Strategic autonomy is not only claimed in votes at the UN , it is exercised in port contracts during inconvenient moments.
+    </li>
+    <li data-n="2">
+      <strong>Accelerate the IMEC and Caspian bypass routes</strong>
+      The India-Middle East-Europe Corridor offers a partial alternative that avoids Iranian territory. Simultaneously, the Caspian sea route component of INSTC — connecting Kazakhstan and Turkmenistan to Baku — should be prioritised as an Iran-independent segment capable of carrying meaningful cargo volumes. India should put financial and diplomatic weight behind both, not just diplomatic language.
+    </li>
+    <li data-n="3">
+      <strong>Upgrade the Kazakhstan relationship to a technology partnership</strong>
+      The $4 billion uranium contract is a floor, not a ceiling. India should open formal dialogue on nuclear fuel cycle cooperation: joint ventures in uranium processing, potential SMR collaboration, and Central Asia's first India-backed rare earth processing facility. Kazakhstan and Uzbekistan together hold not just uranium but beryllium, tantalum, and rare earth elements that India's semiconductor and defence industries will increasingly need. A supply chain anchored in technology partnership survives political weather far better than one anchored in price.
+    </li>
+  </ul>
+
+  <!-- CONCLUSION -->
+  <div class="section-head">
+    <span class="label">Conclusion</span>
+    The Stress Test of Strategic Patience
+  </div>
+
+  <p>The Kazatomprom deal is genuinely significant , as a symbol of India's growing gravitational pull in Eurasian resource markets, as a foundation for the Bhabha nuclear architecture, and as evidence that state-backed diplomacy, executed with patience, can produce agreements that no private company could anchor. Astana's 92.9 percent vote is not just an endorsement of a commercial deal. It is a statement about which powers Central Asia wants to count among its long-term partners.</p>
+
+  <p>But the simultaneous retreat from Chabahar threatens to hollow out that signal. An India that wins uranium contracts while abandoning port investments sends an uncomfortable message: that its engagement with the region is extractive rather than constructive, interested in resources but not relationships. That is precisely the characterisation China's Belt and Road narrative has historically attached to India, and it would be a costly self-inflicted wound to validate it through inaction.</p>
+
+  <p>Homi Bhabha designed his three-stage programme in the 1950s with the confidence that India would have the strategic depth to see it through across decades, governments, and geopolitical disruptions. That confidence is now being tested not in a laboratory but in the unglamorous terrain of port contracts, corridor budgets, and EGM vote tallies.</p>
+
+  <p class="p-short">Whether India's policymakers match Bhabha's long-term vision in their current decisions will determine not just the country's energy future, but the credibility of its claim to be a consequential Eurasian power. The uranium is secured. The road, for now, is broken. The question is what India does next.</p>
+
+  <div class="closing-rule">— ◆ —</div>
+
+  <!-- TAGS -->
+  <div class="tag-row">
+    <span class="tag">Energy Diplomacy</span>
+    <span class="tag">Kazakhstan</span>
+    <span class="tag">Nuclear Policy</span>
+    <span class="tag">Chabahar</span>
+    <span class="tag">INSTC</span>
+    <span class="tag">Central Asia</span>
+    <span class="tag">Strategic Autonomy</span>
+    <span class="tag">India Foreign Policy</span>
+  </div>
+
+  <!-- FOOTNOTES -->
+  <!-- <div class="footnotes">
+    <p class="fn-head">Sources &amp; References</p>
+    <p>1. Kazatomprom EGM Results &amp; Contract Announcement, April 2026 — kazatomprom.kz</p>
+    <p>2. "Uranium Industry Emerges as Strategic Bridge" — Geopolitical Monitor, May 28, 2026</p>
+    <p>3. India's Chabahar Port Crisis — Modern Diplomacy, May 29, 2026</p>
+    <p>4. PFBR First Criticality — PIB India / World Nuclear News, April 7, 2026</p>
+    <p>5. India's Three-Stage Nuclear Power Programme — DAE / PMF IAS</p>
+    <p>6. Cameco–India Supply Deal — Zacks/Finviz, March 2026</p>
+    <p>7. India Nuclear Fuel Revolution — Nuclear Business Platform, July 2025</p>
+    <p>8. With Chabahar in Limbo — Caspian Post, May 2026</p>
+  </div> -->
+
+</div>
+</body>
+</html>
